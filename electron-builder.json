@@ -1,0 +1,30 @@
+{
+  "appId": "com.burnoutblocker.app",
+  "productName": "Weekly Burnout Blocker",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "electron.js",
+    "preload.js",
+    "src/database/**/*",
+    "node_modules/**/*",
+    "package.json"
+  ],
+  "linux": {
+    "target": "AppImage",
+    "category": "Utility"
+  },
+  "win": {
+    "target": "portable",
+    "requestedExecutionLevel": "asInvoker",
+    "forceCodeSigning": false
+  },
+  "extraResources": [
+    {
+      "from": "dist",
+      "to": "dist"
+    }
+  ]
+}
